@@ -1,4 +1,0 @@
-Info: creating file dune-project with this contents: (lang dune 1.6)
-Error: Program "./main.exe" not found!
-Info: creating file dune-project with this contents: (lang dune 1.6)
-Error: Program "./main.exe" not found!
