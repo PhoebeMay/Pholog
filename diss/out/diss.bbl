@@ -1,0 +1,68 @@
+\begin{thebibliography}{10}
+
+\bibitem{datalog}
+Todd Jeffrey~Green Shan Shan~Huang and Boon~Thau Loo.
+\newblock Datalog and emerging applications: An interactive tutorial.
+\newblock {\em SIGMOD}, pages 1213 -- 1216, 2011.
+
+\bibitem{doop}
+Y.~Smaragdakis and M.~Bravenboer.
+\newblock Using datalog for fast and easy program analysis.
+\newblock {\em Datalog 2.0 Workshop}, 2010.
+
+\bibitem{jvm11}
+Gilad Bracha Alex Buckley Daniel~Smith Tim~Lindholm, Frank~Yellin.
+\newblock The java® virtual machine specification java se 11 edition, 2018.
+
+\bibitem{Kowalski2002}
+Robert~A. Kowalski.
+\newblock {The early years of logic programming}.
+\newblock {\em Communications of the ACM}, 2002.
+
+\bibitem{kowalski}
+Robert Kowalski.
+\newblock Predicate logic as programming language.
+\newblock volume~74, pages 569--574, 01 1974.
+
+\bibitem{logprog}
+M.~van Emden and R.~Kowalski.
+\newblock The semantics of predicate logic as a programming language.
+\newblock {\em Journal of the ACM}, 23(4):733 -- 742, 1976.
+
+\bibitem{WAM}
+David H.~D. Warren.
+\newblock An abstract {P}rolog instruction set.
+\newblock {\em SRI international}, 1983.
+
+\bibitem{REFswi}
+Jan Wielemaker.
+\newblock Swi-prolog 6.1.
+\newblock \url{www.swi-prolog.org/download/devel/doc/SWI-Prolog-6.1.5.pdf}.
+\newblock Reference Manual.
+
+\bibitem{Kowalski1971}
+Robert Kowalski and Donald Kuehner.
+\newblock {Linear resolution with selection function}.
+\newblock {\em Artificial Intelligence}, 1971.
+
+\bibitem{mycroftTypes}
+Alan Mycroft and Richard~A. O'Keefe.
+\newblock A polymorphic type system for prolog.
+\newblock {\em Artificial Intelligence}, 23(3):295 -- 307, 1984.
+
+\bibitem{ocamlyacc}
+Lexer and parser generators (ocamllex, ocamlyacc).
+\newblock \url{https://caml.inria.fr/pub/docs/manual-ocaml/lexyacc.html}.
+\newblock OCaml Documentation.
+
+\bibitem{ocamlBook}
+Jason~Hickey Anil~Madhavapeddy and Yaron Minsky.
+\newblock {\em Real World OCaml: Functional Programming for the Masses}.
+\newblock O'Reilly Media.
+
+\bibitem{OUnit}
+O{U}nit.
+\newblock \url{hhttp://ounit.forge.ocamlcore.org/}.
+\newblock OCaml unit testing framework.
+
+\end{thebibliography}

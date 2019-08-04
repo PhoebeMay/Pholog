@@ -1,0 +1,393 @@
+      ocamlc abstractmachine1/.main.eobjs/main.{cmi,cmo,cmt}
+File "abstractmachine1/main.ml", line 3, characters 0-25:
+Warning 33: unused open FlattenInstrForPrint.
+    ocamlopt abstractmachine1/.main.eobjs/main.{cmx,o}
+File "abstractmachine1/main.ml", line 3, characters 0-25:
+Warning 33: unused open FlattenInstrForPrint.
+Program is  
+ (ParseTree.Program (
+                 (ParseTree.Sentence
+                    [(ParseTree.D
+                        (ParseTree.TypeDef ("list", ["A"],
+                           [(ParseTree.TypeDefRight ("cons",
+                               [(ParseTree.TypeVar "A");
+                                 (ParseTree.TypeCons ("list",
+                                    [(ParseTree.TypeVar "A")]))
+                                 ]
+                               ));
+                             (ParseTree.TypeDefRight ("eol", []))]
+                           )));
+                      (ParseTree.D
+                         (ParseTree.TypeDef ("tree", ["A"],
+                            [(ParseTree.TypeDefRight ("tree",
+                                [(ParseTree.TypeVar "A");
+                                  (ParseTree.TypeCons ("tree",
+                                     [(ParseTree.TypeVar "A")]));
+                                  (ParseTree.TypeCons ("tree",
+                                     [(ParseTree.TypeVar "A")]))
+                                  ]
+                                ))
+                              ]
+                            )));
+                      (ParseTree.D
+                         (ParseTree.TypeDef ("direction", [],
+                            [(ParseTree.TypeDefRight ("left", []));
+                              (ParseTree.TypeDefRight ("right", []))]
+                            )));
+                      (ParseTree.P
+                         (ParseTree.PredDef ("unify",
+                            [(ParseTree.TypeVar "B"); (ParseTree.TypeVar "B")
+                              ]
+                            )));
+                      (ParseTree.C
+                         (ParseTree.Clause (
+                            (ParseTree.Atom ("unify",
+                               [(ParseTree.TVar "X"); (ParseTree.TVar "X")])),
+                            [])));
+                      (ParseTree.P
+                         (ParseTree.PredDef ("dfs",
+                            [(ParseTree.TypeVar "C");
+                              (ParseTree.TypeCons ("tree",
+                                 [(ParseTree.TypeVar "C")]));
+                              (ParseTree.TypeCons ("list",
+                                 [(ParseTree.TypeCons ("direction", []))]))
+                              ]
+                            )));
+                      (ParseTree.C
+                         (ParseTree.Clause (
+                            (ParseTree.Atom ("dfs",
+                               [(ParseTree.TVar "V");
+                                 (ParseTree.TFun ("tree",
+                                    [(ParseTree.TVar "V");
+                                      (ParseTree.TVar "T1");
+                                      (ParseTree.TVar "T2")]
+                                    ));
+                                 (ParseTree.TFun ("eol", []))]
+                               )),
+                            [])));
+                      (ParseTree.C
+                         (ParseTree.Clause (
+                            (ParseTree.Atom ("dfs",
+                               [(ParseTree.TVar "V");
+                                 (ParseTree.TFun ("tree",
+                                    [(ParseTree.TVar "X");
+                                      (ParseTree.TVar "T1");
+                                      (ParseTree.TVar "T2")]
+                                    ));
+                                 (ParseTree.TVar "P1")]
+                               )),
+                            [(ParseTree.CAT
+                                (ParseTree.Atom ("dfs",
+                                   [(ParseTree.TVar "V");
+                                     (ParseTree.TVar "T1");
+                                     (ParseTree.TVar "P2")]
+                                   )));
+                              (ParseTree.CAT
+                                 (ParseTree.Atom ("unify",
+                                    [(ParseTree.TVar "P1");
+                                      (ParseTree.TFun ("cons",
+                                         [(ParseTree.TFun ("left", []));
+                                           (ParseTree.TVar "P2")]
+                                         ))
+                                      ]
+                                    )))
+                              ]
+                            )))
+                      ]),
+                 (ParseTree.Resolvant [])))
+The type defs are
+"direction", ([],
+              [(ParseTree.TypeDefRight ("left", []));
+                (ParseTree.TypeDefRight ("right", []))])
+"tree", (["A"],
+         [(ParseTree.TypeDefRight ("tree",
+             [(ParseTree.TypeVar "A");
+               (ParseTree.TypeCons ("tree", [(ParseTree.TypeVar "A")]));
+               (ParseTree.TypeCons ("tree", [(ParseTree.TypeVar "A")]))]
+             ))
+           ])
+"list", (["A"],
+         [(ParseTree.TypeDefRight ("cons",
+             [(ParseTree.TypeVar "A");
+               (ParseTree.TypeCons ("list", [(ParseTree.TypeVar "A")]))]
+             ));
+           (ParseTree.TypeDefRight ("eol", []))])
+
+constructor to type is
+"tree" 3 body?
+"left" 0 body?
+"right" 0 body?
+"eol" 0 body?
+"cons" 2 body?
+
+NEW C TC: typeCheckClause "unify" 
+
+"dfs"
+"unify"
+getTypesOfVariablesAtom "unify"
+getMGUVariableType "X"
+hi
+no match in subst
+ans is (ParseTree.TypeVar "B")
+
+ Variable types map is 
+"X", (ParseTree.TypeVar "B")
+
+check types are equivalent list [(ParseTree.TypeVar "B");
+                                  (ParseTree.TypeVar "B")] [(ParseTree.TypeVar
+                                                               "B");
+                                                             (ParseTree.TypeVar
+                                                                "B")
+                                                             ] 
+
+
+check types are equivalent (ParseTree.TypeVar "B")   and   (ParseTree.TypeVar
+                                                              "B")
+check types are equivalent list [(ParseTree.TypeVar "B")] [(ParseTree.TypeVar
+                                                              "B")
+                                                            ] 
+
+
+check types are equivalent (ParseTree.TypeVar "B")   and   (ParseTree.TypeVar
+                                                              "B")
+check types are equivalent list [] [] 
+
+
+NEW C TC: typeCheckClause "dfs" 
+
+"dfs"
+"unify"
+getTypesOfVariablesAtom "dfs"
+getTypesOfVariablesFunctor "tree"
+getTypesOfVariablesFunctor "eol"
+getMGUVariableType "T1"
+hi
+no match in subst
+ans is (ParseTree.TypeCons ("tree", [(ParseTree.TypeVar "A")]))
+getMGUVariableType "T2"
+hi
+no match in subst
+ans is (ParseTree.TypeCons ("tree", [(ParseTree.TypeVar "A")]))
+getMGUVariableType "V"
+hi
+ans is (ParseTree.TypeVar "C")
+
+ Variable types map is 
+"T1", (ParseTree.TypeCons ("tree", [(ParseTree.TypeVar "A")]))
+"T2", (ParseTree.TypeCons ("tree", [(ParseTree.TypeVar "A")]))
+"V", (ParseTree.TypeVar "C")
+
+getargtypelist "tree"
+getargtypelist "eol"
+check types are equivalent list [(ParseTree.TypeVar "C");
+                                  (ParseTree.TypeCons ("tree",
+                                     [(ParseTree.TypeVar "C")]));
+                                  (ParseTree.TypeCons ("list",
+                                     [(ParseTree.TypeVar "A")]))
+                                  ] [(ParseTree.TypeVar "C");
+                                      (ParseTree.TypeCons ("tree",
+                                         [(ParseTree.TypeVar "C")]));
+                                      (ParseTree.TypeCons ("list",
+                                         [(ParseTree.TypeCons ("direction",
+                                             []))
+                                           ]
+                                         ))
+                                      ] 
+
+
+check types are equivalent (ParseTree.TypeVar "C")   and   (ParseTree.TypeVar
+                                                              "C")
+check types are equivalent list [(ParseTree.TypeCons ("tree",
+                                    [(ParseTree.TypeVar "C")]));
+                                  (ParseTree.TypeCons ("list",
+                                     [(ParseTree.TypeVar "A")]))
+                                  ] [(ParseTree.TypeCons ("tree",
+                                        [(ParseTree.TypeVar "C")]));
+                                      (ParseTree.TypeCons ("list",
+                                         [(ParseTree.TypeCons ("direction",
+                                             []))
+                                           ]
+                                         ))
+                                      ] 
+
+
+check types are equivalent (ParseTree.TypeCons ("tree",
+                              [(ParseTree.TypeVar "C")]))   and   (ParseTree.TypeCons (
+                                                                    "tree",
+                                                                    [(ParseTree.TypeVar
+                                                                    "C")]))
+check types are equivalent list [(ParseTree.TypeCons ("list",
+                                    [(ParseTree.TypeVar "A")]))
+                                  ] [(ParseTree.TypeCons ("list",
+                                        [(ParseTree.TypeCons ("direction", 
+                                            []))
+                                          ]
+                                        ))
+                                      ] 
+
+
+check types are equivalent (ParseTree.TypeCons ("list",
+                              [(ParseTree.TypeVar "A")]))   and   (ParseTree.TypeCons (
+                                                                    "list",
+                                                                    [(ParseTree.TypeCons (
+                                                                    "direction",
+                                                                    []))]))
+check types are equivalent list [] [] 
+
+
+NEW C TC: typeCheckClause "dfs" 
+
+"dfs"
+"unify"
+getTypesOfVariablesAtom "dfs"
+getTypesOfVariablesFunctor "tree"
+getTypesOfVariablesAtom "dfs"
+getTypesOfVariablesAtom "unify"
+getTypesOfVariablesFunctor "cons"
+getTypesOfVariablesFunctor "left"
+getMGUVariableType "P2"
+hi
+ans is (ParseTree.TypeCons ("list", [(ParseTree.TypeCons ("direction", []))]
+          ))
+getMGUVariableType "T1"
+hi
+ans is (ParseTree.TypeCons ("tree", [(ParseTree.TypeVar "A")]))
+getMGUVariableType "T2"
+hi
+no match in subst
+ans is (ParseTree.TypeCons ("tree", [(ParseTree.TypeVar "A")]))
+getMGUVariableType "X"
+hi
+no match in subst
+ans is (ParseTree.TypeVar "A")
+getMGUVariableType "P1"
+hi
+ans is (ParseTree.TypeCons ("list", [(ParseTree.TypeCons ("direction", []))]
+          ))
+getMGUVariableType "V"
+hi
+no match in subst
+ans is (ParseTree.TypeVar "C")
+
+ Variable types map is 
+"P2", (ParseTree.TypeCons ("list", [(ParseTree.TypeCons ("direction", []))]))
+"T1", (ParseTree.TypeCons ("tree", [(ParseTree.TypeVar "A")]))
+"T2", (ParseTree.TypeCons ("tree", [(ParseTree.TypeVar "A")]))
+"X", (ParseTree.TypeVar "A")
+"P1", (ParseTree.TypeCons ("list", [(ParseTree.TypeCons ("direction", []))]))
+"V", (ParseTree.TypeVar "C")
+
+getargtypelist "tree"
+check types are equivalent list [(ParseTree.TypeVar "C");
+                                  (ParseTree.TypeCons ("tree",
+                                     [(ParseTree.TypeVar "A")]));
+                                  (ParseTree.TypeCons ("list",
+                                     [(ParseTree.TypeCons ("direction", []))]
+                                     ))
+                                  ] [(ParseTree.TypeVar "C");
+                                      (ParseTree.TypeCons ("tree",
+                                         [(ParseTree.TypeVar "C")]));
+                                      (ParseTree.TypeCons ("list",
+                                         [(ParseTree.TypeCons ("direction",
+                                             []))
+                                           ]
+                                         ))
+                                      ] 
+
+
+check types are equivalent (ParseTree.TypeVar "C")   and   (ParseTree.TypeVar
+                                                              "C")
+check types are equivalent list [(ParseTree.TypeCons ("tree",
+                                    [(ParseTree.TypeVar "A")]));
+                                  (ParseTree.TypeCons ("list",
+                                     [(ParseTree.TypeCons ("direction", []))]
+                                     ))
+                                  ] [(ParseTree.TypeCons ("tree",
+                                        [(ParseTree.TypeVar "C")]));
+                                      (ParseTree.TypeCons ("list",
+                                         [(ParseTree.TypeCons ("direction",
+                                             []))
+                                           ]
+                                         ))
+                                      ] 
+
+
+check types are equivalent (ParseTree.TypeCons ("tree",
+                              [(ParseTree.TypeVar "A")]))   and   (ParseTree.TypeCons (
+                                                                    "tree",
+                                                                    [(ParseTree.TypeVar
+                                                                    "C")]))
+check types are equivalent list [(ParseTree.TypeCons ("list",
+                                    [(ParseTree.TypeCons ("direction", []))]
+                                    ))
+                                  ] [(ParseTree.TypeCons ("list",
+                                        [(ParseTree.TypeCons ("direction", 
+                                            []))
+                                          ]
+                                        ))
+                                      ] 
+
+
+check types are equivalent (ParseTree.TypeCons ("list",
+                              [(ParseTree.TypeCons ("direction", []))]))   and   (
+ParseTree.TypeCons ("list", [(ParseTree.TypeCons ("direction", []))]))
+check types are equivalent list [] [] 
+
+
+check is sub type list [(ParseTree.TypeVar "C");
+                         (ParseTree.TypeCons ("tree",
+                            [(ParseTree.TypeVar "C")]));
+                         (ParseTree.TypeCons ("list",
+                            [(ParseTree.TypeCons ("direction", []))]))
+                         ] [(ParseTree.TypeVar "C");
+                             (ParseTree.TypeCons ("tree",
+                                [(ParseTree.TypeVar "A")]));
+                             (ParseTree.TypeCons ("list",
+                                [(ParseTree.TypeCons ("direction", []))]))
+                             ] 
+
+
+check is sub type list [(ParseTree.TypeCons ("tree",
+                           [(ParseTree.TypeVar "C")]));
+                         (ParseTree.TypeCons ("list",
+                            [(ParseTree.TypeCons ("direction", []))]))
+                         ] [(ParseTree.TypeCons ("tree",
+                               [(ParseTree.TypeVar "A")]));
+                             (ParseTree.TypeCons ("list",
+                                [(ParseTree.TypeCons ("direction", []))]))
+                             ] 
+
+
+check is sub type list [(ParseTree.TypeCons ("list",
+                           [(ParseTree.TypeCons ("direction", []))]))
+                         ] [(ParseTree.TypeCons ("list",
+                               [(ParseTree.TypeCons ("direction", []))]))
+                             ] 
+
+
+check is sub type list [] [] 
+
+
+getargtypelist "cons"
+getargtypelist "left"
+check is sub type list [(ParseTree.TypeVar "B"); (ParseTree.TypeVar "B")] 
+[(ParseTree.TypeCons ("list", [(ParseTree.TypeCons ("direction", []))]));
+  (ParseTree.TypeCons ("list", [(ParseTree.TypeCons ("direction", []))]))] 
+
+
+Uncaught exception:
+  
+  Dt.Err("Typevar B is not a sub type of (ParseTree.TypeCons (\"list\", [(ParseTree.TypeCons (\"direction\", []))]))")
+
+Raised at file "abstractmachine1/typeChecker.ml", line 340, characters 4-89
+Called from file "abstractmachine1/typeChecker.ml", line 376, characters 19-35
+Called from file "abstractmachine1/typeChecker.ml", line 386, characters 14-49
+Called from file "list.ml", line 106, characters 12-15
+Called from file "src/list0.ml" (inlined), line 26, characters 40-75
+Called from file "abstractmachine1/typeChecker.ml", line 411, characters 14-88
+Called from file "list.ml", line 106, characters 12-15
+Called from file "src/list0.ml" (inlined), line 26, characters 40-75
+Called from file "abstractmachine1/typeChecker.ml", line 439, characters 16-280
+Called from file "abstractmachine1/runall.ml", line 16, characters 20-42
+Called from file "abstractmachine1/main.ml", line 28, characters 18-39
+Called from file "abstractmachine1/main.ml", line 31, characters 8-18

@@ -1,0 +1,35 @@
+
+
+(executable
+  (name main)
+  (libraries lexer_parser fmt core sexplib core_extended run_project datatypes code_generation)
+  (preprocess (pps ppx_deriving.std ppx_jane))
+  (modules main)
+)
+
+(executable
+  (name runFromFile)
+  (libraries lexer_parser fmt core sexplib core_extended run_project datatypes code_generation)
+  (preprocess (pps ppx_deriving.std ppx_jane))
+  (modules runFromFile)
+)
+
+(executable
+  (name writeToFile)
+  (libraries lexer_parser fmt core sexplib core_extended run_project datatypes code_generation)
+  (preprocess (pps ppx_deriving.std ppx_jane))
+  (modules writeToFile)
+)
+
+(executable
+  (name endToEndTest)
+  (libraries lexer_parser fmt core sexplib core_extended run_project datatypes code_generation test oUnit)
+  (preprocess (pps ppx_deriving.std ppx_jane))
+  (modules endToEndTest)
+)
+
+
+(env
+  (dev
+  (ocamlopt_flags (:standard -O3 ))
+    (flags (:standard -warn-error -A-42))))

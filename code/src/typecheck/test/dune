@@ -1,0 +1,5 @@
+(executable
+  (name typecheckTest)
+  (libraries lexer_parser fmt core sexplib core_extended run_project datatypes code_generation oUnit)
+  (preprocess (pps ppx_deriving.std ppx_jane))
+)

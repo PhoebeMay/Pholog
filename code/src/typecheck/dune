@@ -1,0 +1,10 @@
+
+
+(library
+  (name typecheck)
+  (wrapped false)
+  (libraries  fmt core sexplib core_extended logs  logs.fmt datatypes utils)
+  (preprocess (pps ppx_deriving.std ppx_jane))
+  (private_modules checkClause checkTypeEquivalence getDeclarations inferVariableTypes unifyTypes)
+
+)

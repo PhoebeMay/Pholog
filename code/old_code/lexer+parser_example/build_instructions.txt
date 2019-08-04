@@ -1,0 +1,10 @@
+ocamllex lexer.mll       # generates lexer.ml
+ocamlyacc parser.mly     # generates parser.ml and parser.mli
+ocamlc -c parser.mli
+ocamlfind ocamlc -linkpkg  parseTree.ml parser.ml lexer.ml calc.ml -o parser
+
+
+
+
+
+ocamlfind ocamlc -linkpkg -package oUnit parserTest.ml -o exx

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+
+testcase=$1
+
+res=~/Dropbox/Stuff1819/proooject/Project/code/src/results
+
+
+
+cd ~/Dropbox/Stuff1819/proooject/Project/code/src/bench
+
+TRAILSZ=307200 CSTRSZ=3072 GLOBALSZ=81920 LOCALSZ=5096000 ./$testcase-gnu &
+
+psrecord $(pgrep $testcase-gnu) --plot "$res/gnu.png" --log "$res/gnu.txt"

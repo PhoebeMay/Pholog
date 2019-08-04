@@ -1,0 +1,9 @@
+
+
+(library
+  (name run_project)
+  (wrapped false)
+  (libraries  fmt core sexplib core_extended logs  logs.fmt execute code_generation typecheck datatypes)
+  (preprocess (pps ppx_deriving.std ppx_jane))
+
+)

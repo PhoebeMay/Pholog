@@ -1,0 +1,115 @@
+my compiler
+20.15
+\gnu-prolog
+12.35
+
+SWI
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.050 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.066 seconds
+
+SWI finish compile
+
+2.09
+beep
+my compiler
+20.15
+\gnu-prolog
+11.77
+
+SWI
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.050 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.066 seconds
+
+SWI finish compile
+
+2.16
+beep
+my compiler
+20.13
+\gnu-prolog
+11.83
+
+SWI
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.050 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.066 seconds
+
+SWI finish compile
+
+2.10
+beep
+my compiler
+20.01
+\gnu-prolog
+11.86
+
+SWI
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.049 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.065 seconds
+
+SWI finish compile
+
+2.09
+beep
+my compiler
+20.21
+\gnu-prolog
+11.87
+
+SWI
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.049 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.066 seconds
+
+SWI finish compile
+
+2.09
+beep

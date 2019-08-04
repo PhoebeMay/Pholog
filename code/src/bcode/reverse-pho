@@ -1,0 +1,1 @@
+((nums((maxArg 1)(maxTemp 2)))(code((Allocate 0)(PutIntA(Arg 0)10000000)(Call(PositionF 4))Finish(TryMeElse(PositionC 8))(Allocate 0)(GetInt(Arg 0)0)Deallocate TrustMe(Allocate 1)(GetVariable(T(Temp 0))(Arg 0))(InitAcc(Temp 1)(T(Temp 0)))(SubI(Temp 1)1)(Is(E(Env 0))(Temp 1))(PutValue(E(Env 0))(Arg 0))(Call(PositionF 4))Deallocate))(structMap()))

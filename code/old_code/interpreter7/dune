@@ -1,0 +1,11 @@
+(library
+  (name interpreter7)
+  (libraries prolog_lexer_parser)
+  (preprocess (pps ppx_deriving.std))
+  (wrapped false)
+)
+
+;(executable
+;  (name interp)
+;  (libraries prolog_lexer_parser)
+;)

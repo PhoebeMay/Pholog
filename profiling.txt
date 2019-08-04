@@ -1,0 +1,1 @@
+(ocamlopt_flags (:standard -p))

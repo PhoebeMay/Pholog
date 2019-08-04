@@ -1,0 +1,10 @@
+(library
+  (name interpreter3)
+  (libraries prolog_lexer_parser)
+  (wrapped false)
+)
+
+;(executable
+;  (name interp)
+;  (libraries prolog_lexer_parser)
+;)

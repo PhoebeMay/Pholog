@@ -1,0 +1,9 @@
+
+
+(library
+  (name execute)
+  (wrapped false)
+  (libraries fmt core sexplib core_extended logs  logs.fmt datatypes utils)
+  (preprocess (pps ppx_deriving.std ppx_jane))
+  (private_modules unification execute envCpStackOps initialise instructionImplementationsFunctor stackImplementation)
+)

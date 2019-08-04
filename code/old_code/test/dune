@@ -1,0 +1,95 @@
+(executable
+  (name parserTest)
+  (libraries prolog_lexer_parser oUnit)
+  (modules parserTest)
+)
+
+(executable
+  (name useParser)
+  (libraries prolog_lexer_parser)
+  (modules useParser)
+)
+
+(executable
+  (name useInterpreter7)
+  (libraries interpreter7)
+  (modules useInterpreter7)
+)
+
+
+(executable
+  (name useInterpreter1)
+  (libraries interpreter1)
+  (modules useInterpreter1)
+)
+
+(executable
+  (name useInterpreter5)
+  (libraries interpreter5)
+  (modules useInterpreter5)
+)
+
+
+(executable
+  (name useInterpreter2)
+  (libraries interpreter2)
+  (modules useInterpreter2)
+)
+
+(executable
+  (name useInterpreter3)
+  (libraries interpreter3)
+  (modules useInterpreter3)
+)
+
+(executable
+  (name useInterpreter4)
+  (libraries interpreter4)
+  (modules useInterpreter4)
+)
+
+
+
+
+
+(executable
+  (name interpreterTest)
+  (libraries interpreter1 oUnit)
+  (modules interpreterTest)
+)
+
+
+(executable
+  (name interpreterTest2)
+  (libraries interpreter2 oUnit)
+  (modules interpreterTest2)
+)
+
+(executable
+  (name interpreterTest3)
+  (libraries interpreter3 oUnit)
+  (modules interpreterTest3)
+)
+
+(executable
+  (name interpreterTest4)
+  (libraries interpreter4 oUnit)
+  (modules interpreterTest4)
+)
+
+
+
+
+(executable
+  (name interpreterTest5)
+  (libraries interpreter5 oUnit)
+  (modules interpreterTest5)
+)
+
+
+
+(executable
+  (name interpreterTest7)
+  (libraries interpreter7 oUnit)
+  (modules interpreterTest7)
+)

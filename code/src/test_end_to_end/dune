@@ -1,0 +1,10 @@
+
+
+(library
+  (name test)
+  (wrapped false)
+  (libraries fmt core sexplib core_extended logs  logs.fmt oUnit datatypes run_project)
+  (preprocess (pps ppx_deriving.std ppx_jane))
+  (private_modules noTypeCheck typeCheckTests)
+
+)

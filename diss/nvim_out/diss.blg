@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: diss.aux
+The style file: unsrt.bst
+Database file #1: references.bib
+Name 1 in "Shan Shan Huang, Todd Jeffrey Green, and Boon Thau Loo" has a comma at the end for entry datalog
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Tim Lindholm, Frank Yellin, Gilad Bracha, Alex Buckley, Daniel Smith" for entry jvm11
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Tim Lindholm, Frank Yellin, Gilad Bracha, Alex Buckley, Daniel Smith" for entry jvm11
+while executing---line 944 of file unsrt.bst
+Warning--empty booktitle in kowalski
+Name 1 in "Anil Madhavapeddy, Jason Hickey, and Yaron Minsky" has a comma at the end for entry ocamlBook
+while executing---line 944 of file unsrt.bst
+Warning--empty year in ocamlBook
+You've used 13 entries,
+            1791 wiz_defined-function locations,
+            518 strings with 4984 characters,
+and the built_in function-call counts, 2437 in all, are:
+= -- 219
+> -- 70
+< -- 3
++ -- 30
+- -- 17
+* -- 103
+:= -- 361
+add.period$ -- 39
+call.type$ -- 13
+change.case$ -- 12
+chr.to.int$ -- 0
+cite$ -- 15
+duplicate$ -- 122
+empty$ -- 271
+format.name$ -- 17
+if$ -- 575
+int.to.chr$ -- 0
+int.to.str$ -- 13
+missing$ -- 10
+newline$ -- 68
+num.names$ -- 11
+pop$ -- 61
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 75
+stack$ -- 0
+substring$ -- 126
+swap$ -- 36
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 17
+width$ -- 15
+write$ -- 132
+(There were 4 error messages)

@@ -1,0 +1,42 @@
+(ParseTree.Clause (
+   (ParseTree.Atom ("dog", [(ParseTree.TFun ("freddie", []))])), []))
+[((Dt.AbstractF ("dog", 1)),
+  [(0,
+    [(
+0. Dt.TryMeElse (Dt.AbstractC ((Dt.AbstractF ("dog", 1)), 1)));                         5
+1. (Dt.Allocate 0);
+2. (Dt.GetStructureA (("dusk", 0), (Dt.Arg 0)));
+3. Dt.Proceed;
+4. Dt.Deallocate]);
+    (1,
+     [
+5. Dt.TrustMe;
+6. (Dt.Allocate 0);
+7. (Dt.GetStructureA (("freddie", 0), (Dt.Arg 0)));
+8. Dt.Proceed;
+9. Dt.Deallocate])
+    ]);
+10.((Dt.AbstractF ("query", 0)),
+   [(0,
+11.[(Dt.Allocate 1); (Dt.PutVariable ((Dt.Env 0), (Dt.Arg 0)));
+12.(Dt.Call (Dt.AbstractF ("dog", 1)));                                           0
+13.Dt.Return])
+     ])
+  ]
+
+
+
+0. (Dt.TryMeElse (Dt.PositionC 5))
+1. (Dt.Allocate 0)
+2. (Dt.GetStructureA (("dusk", 0), (Dt.Arg 0)))
+3. Dt.Proceed
+4. Dt.Deallocate
+5. Dt.TrustMe
+6. (Dt.Allocate 0)
+7. (Dt.GetStructureA (("freddie", 0), (Dt.Arg 0)))
+8. Dt.Proceed
+9. Dt.Deallocate
+10. (Dt.Allocate 1)
+11. (Dt.PutVariable ((Dt.Env 0), (Dt.Arg 0)))
+12. (Dt.Call (Dt.PositionF 0))
+13. Dt.Return

@@ -1,0 +1,10 @@
+(ocamllex lexer.mll)
+(ocamlyacc parser.mly)
+
+(library
+     (name lexer_parser)
+     (wrapped false)
+     (libraries sexplib core)
+     (preprocess (pps ppx_deriving.std ppx_jane))
+     (flags (:standard -warn-error -A-42))
+ )

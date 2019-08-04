@@ -1,0 +1,925 @@
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.052 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.070 seconds
+
+SWI finish compile
+
+1.23
+swi
+1.23
+my compiler
+0.48
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+1.31
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.058 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.080 seconds
+
+SWI finish compile
+
+4.90
+swi
+4.90
+my compiler
+0.97
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+2.47
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.052 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.069 seconds
+
+SWI finish compile
+
+11.28
+swi
+11.28
+my compiler
+1.54
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+3.94
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.053 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.071 seconds
+
+SWI finish compile
+
+19.25
+swi
+19.25
+my compiler
+1.92
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+4.90
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.058 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.076 seconds
+
+SWI finish compile
+
+29.31
+swi
+29.31
+my compiler
+2.43
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+5.97
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.052 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.069 seconds
+
+SWI finish compile
+
+1.24
+swi
+1.24
+my compiler
+0.49
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+1.33
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.052 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.070 seconds
+
+SWI finish compile
+
+4.85
+swi
+4.85
+my compiler
+0.97
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+2.52
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.052 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.069 seconds
+
+SWI finish compile
+
+10.66
+swi
+10.66
+my compiler
+1.50
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+3.66
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.052 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.069 seconds
+
+SWI finish compile
+
+18.69
+swi
+18.69
+my compiler
+1.91
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+4.85
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.052 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.070 seconds
+
+SWI finish compile
+
+34.02
+swi
+34.02
+my compiler
+2.35
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+6.48
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.054 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.072 seconds
+
+SWI finish compile
+
+1.23
+swi
+1.23
+my compiler
+0.56
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+1.86
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.057 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.075 seconds
+
+SWI finish compile
+
+4.89
+swi
+4.89
+my compiler
+0.98
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+3.66
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.062 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.080 seconds
+
+SWI finish compile
+
+10.74
+swi
+10.74
+my compiler
+1.43
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+4.18
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.065 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.084 seconds
+
+SWI finish compile
+
+18.95
+swi
+18.95
+my compiler
+1.91
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+5.76
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.076 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.093 seconds
+
+SWI finish compile
+
+29.38
+swi
+29.38
+my compiler
+2.48
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+6.67
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.059 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.077 seconds
+
+SWI finish compile
+
+1.32
+swi
+1.32
+my compiler
+0.55
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+1.65
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.063 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.081 seconds
+
+SWI finish compile
+
+5.01
+swi
+5.01
+my compiler
+0.95
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+3.17
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.067 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.085 seconds
+
+SWI finish compile
+
+10.71
+swi
+10.71
+my compiler
+1.38
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+4.15
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.065 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.083 seconds
+
+SWI finish compile
+
+19.28
+swi
+19.28
+my compiler
+1.95
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+5.42
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.063 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.082 seconds
+
+SWI finish compile
+
+29.66
+swi
+29.66
+my compiler
+2.50
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+6.65
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.066 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.084 seconds
+
+SWI finish compile
+
+1.31
+swi
+1.31
+my compiler
+0.50
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+1.78
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.062 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.080 seconds
+
+SWI finish compile
+
+4.93
+swi
+4.93
+my compiler
+0.98
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+3.10
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.058 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.076 seconds
+
+SWI finish compile
+
+11.07
+swi
+11.07
+my compiler
+1.42
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+4.35
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.063 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.081 seconds
+
+SWI finish compile
+
+19.49
+swi
+19.49
+my compiler
+2.07
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+5.65
+gnu
+1.31
+
+SWI
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:1:
+	Singleton variables: [X]
+Warning: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:2:
+	Singleton variables: [X]
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:5:
+	No permission to modify static procedure `halt/0'
+	Defined at /usr/lib/swi-prolog/boot/init.pl:3631
+ERROR: /home/phoebe/Dropbox/Stuff1819/proooject/Project/code/src/bench/trec-test.txt:8:0: Syntax error: Unexpected end of file
+% autoloading prolog_codewalk:must_be/2 from /usr/lib/swi-prolog/library/error
+% autoloading qsave:current_foreign_library/2 from /usr/lib/swi-prolog/library/shlib
+% autoloading prolog_debug:backtrace/1 from /usr/lib/swi-prolog/library/prolog_stack
+% autoloading prolog_codewalk:portray_clause/1 from /usr/lib/swi-prolog/library/listing
+% autoloading prolog_codewalk:clause_info/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading prolog_codewalk:initialization_layout/4 from /usr/lib/swi-prolog/library/prolog_clause
+% autoloading record:member/2 from /usr/lib/swi-prolog/library/lists
+% autoloading oset:reverse/2 from /usr/lib/swi-prolog/library/lists
+% autoloading error:assertion/1 from /usr/lib/swi-prolog/library/debug
+% autoloading prolog_codewalk:clause_name/2 from /usr/lib/swi-prolog/library/prolog_clause
+% Autoloader: iteration 1 resolved 10 predicates and loaded 10 files in 0.056 seconds.  Restarting ...
+% Autoloader: loaded 10 files in 2 iterations in 0.074 seconds
+
+SWI finish compile
+
+31.30
+swi
+31.30
+my compiler
+2.41
+pho
+
+trec-test-gnu.pl:1: warning: singleton variables [X] for preventLastCallOpt/1
+trec-test-gnu.pl:2: warning: singleton variables [X] for any/1
+6.68
+gnu
+1.31

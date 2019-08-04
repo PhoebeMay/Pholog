@@ -1,0 +1,5 @@
+(library
+  (name interpreter1)
+  (libraries prolog_lexer_parser)
+  (wrapped false)
+)

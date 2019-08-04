@@ -1,0 +1,108 @@
+#!/bin/bash
+
+
+testcase=$1
+iter=$2
+
+log="$HOME/Dropbox/Stuff1819/proooject/Project/code/src/scripts/log"
+
+bigtime=0
+
+respho=()
+resswi=()
+resgnu=()
+
+rm $log
+touch $log
+
+#
+heap="3G"
+stack="3G"
+echo "$iter"
+
+for i in $(seq 1 $iter)
+do
+echo "$i"
+
+echo "my compiler" | tee -a $log
+
+cd ~/Dropbox/Stuff1819/proooject/Project/code/src
+
+
+OCAMLRUNPARAM="h=$heap,s=$stack"
+export OCAMLRUNPARAM="h=$heap,s=$stack"
+
+dune exec ./writeToFile.exe "$testcase-pho" >> $log
+
+dune build ./runFromFile.exe >> $log
+
+
+
+me=$(OCAMLRUNPARAM="h=$heap,s=$stack"; /usr/bin/time -f '%U' ./_build/default/runFromFile.exe "$testcase-pho" |& tee -a $log)
+#me=$( /usr/bin/time -f '%U' ./_build/default/runFromFile.exe "$testcase-pho" |& tee -a $log)
+echo $me
+respho+=("$me")
+
+
+# /usr/bin/time -f '%U'
+
+
+
+cd ~/Dropbox/Stuff1819/proooject/Project/code/src/bench
+
+
+echo -e "\gnu-prolog" | tee -a $log
+
+
+TRAILSZ=30720 CSTRSZ=3072 GLOBALSZ=8192 LOCALSZ=409600 gplc --no-top-level "$testcase-gnu.pl"
+
+
+
+
+if [[ $bigtime -eq 1  ]]
+then
+TRAILSZ=307200 CSTRSZ=3072 GLOBALSZ=81920 LOCALSZ=5096000  /usr/bin/time --verbose "./$testcase-gnu"
+echo sadtime
+else
+gnu=$( TRAILSZ=307200 CSTRSZ=3072 GLOBALSZ=81920 LOCALSZ=5096000 /usr/bin/time -f '%U' $HOME/Dropbox/Stuff1819/proooject/Project/code/src/scripts/repeat.sh $testcase |& tee -a $log)
+echo here
+echo $gnu
+resgnu+=("$gnu")
+echo byebye
+fi
+
+
+
+echo -e "\nSWI" | tee -a $log
+
+swipl -G100g -T20g -L5g -o "swi_executables/$testcase.plexe" -g goal -c "$testcase-swi.txt" &>> $log
+
+echo -e "\nSWI finish compile\n" >> $log
+
+if [[ $bigtime -eq 1  ]]
+then
+time "./swi_executables/$testcase.plexe" |& tee -a $log
+else
+swi=$(/usr/bin/time -f '%U' "./swi_executables/$testcase.plexe" |& tee -a $log)
+echo $swi
+resswi+=("$swi")
+fi
+
+beep >> $log
+
+
+
+
+done
+
+echo
+echo pho
+echo "${respho[*]}"
+echo swi
+echo "${resswi[*]}"
+echo gnu
+echo "${resgnu[*]}"
+
+notify-send --urgency=critical "its done :)"
+
+beep

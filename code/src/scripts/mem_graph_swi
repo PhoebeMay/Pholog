@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+
+testcase=$1
+
+res=~/Dropbox/Stuff1819/proooject/Project/code/src/results
+
+
+
+cd ~/Dropbox/Stuff1819/proooject/Project/code/src/bench
+
+
+"./swi_executables/$testcase.plexe" &
+
+psrecord $(pgrep swipl) --plot "$res/swi.png" --log "$res/swi.txt"

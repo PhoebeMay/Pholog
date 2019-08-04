@@ -1,0 +1,9 @@
+(ocamllex lexer.mll)
+
+(ocamlyacc parser.mly)
+
+(library
+     (name prolog_lexer_parser)
+     (wrapped false)
+     (preprocess (pps ppx_deriving.std))
+ )
