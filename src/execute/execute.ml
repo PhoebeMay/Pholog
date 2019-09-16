@@ -269,7 +269,7 @@ module DriverAndFunctions (State : StateTyp) : DriverAndFunctionsTyp = struct
           else execute newState
       | StructGetVariable (E (Env e)), _, Some env ->
           I.unifyInFromHeap env.value.vars e compState
-      | StructGetVariable (T (Temp e)), _, Some env ->
+      | StructGetVariable (T (Temp e)), _, _ ->
           I.unifyInFromHeap compState.temps e compState
       | PutIntT (Temp t, n), _, _ ->
           logError (fun m -> m "HI");
@@ -384,56 +384,6 @@ module DriverAndFunctions (State : StateTyp) : DriverAndFunctionsTyp = struct
           in
           compState.choicePoints <- e.value.callerCps;
           compState.trail <- e.value.callerTrailpoint;
-          let resetHead =
-            e.value.callerCps
-            (* in let _ = raise Oops *)
-
-            (* in let _ = ( match resetHead with
-              Some(cp) -> (match (cp.value.stack) with
-                | Some(env) -> (match e.prev with
-                    | Some(preve) ->
-                    if preve = e
-                    then
-                      print_endline "1"
-                    else   print_endline "2"
-
-                    | _ -> ())
-
-              )
-            | None -> print_endline "3"
-           ) *)
-
-            (* in let _ = ( match resetHead with
-              Some((cp : choicePoint node)) ->
-              if ((e.prev) : stackVal) = (cp.value.stack : stackVal)
-              then   (
-                print_endline "1";
-                compState.choicePoints <- e.value.callerCps;
-                compState.trail <- e.value.callerTrailpoint)
-              else   print_endline "2"
-
-            | None ->
-            compState.choicePoints <- e.value.callerCps;
-            compState.trail <- e.value.callerTrailpoint
-           ) *)
-
-            (* in let _ = (match e.prev with
-            | Some(preve) ->
-              if preve = e
-              then
-                print_endline "1"
-              else   print_endline "2"
-
-            | None -> ()) *)
-
-            (* match (resetHead.stackVal) with
-           | Some(env) ->
-                   if env = e
-                   then
-                     compState.choicePoints <- e.value.callerCps;
-                   compState.trail <- e.value.callerTrailpoint *)
-            (* else () *)
-          in
           execute compState
       | Backtrack, _, _ -> execute (backtrack compState)
       | Finish, _, Some e -> (

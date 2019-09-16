@@ -87,7 +87,7 @@ let rec instantiate mapping typ =
   | TypeCons (name, args) ->
       TypeCons (name, List.map ~f:(instantiate mapping) args)
 
-let rec instantiateTDR mapping (TypeDefRight (name, args)) =
+let instantiateTDR mapping (TypeDefRight (name, args)) =
   TypeDefRight (name, List.map ~f:(instantiate mapping) args)
 
 let rec getTypesOfVariablesFromExpectedType typeDefs expectedType result term =
@@ -107,7 +107,7 @@ let rec getTypesOfVariablesFromExpectedType typeDefs expectedType result term =
             List.find_exn cases ~f:(fun (TypeDefRight (defname, _)) ->
                 defname = structName)
           in
-          let (TypeDefRight (n, rcases)) = instantiateTDR subst thisCase in
+          let (TypeDefRight (_, rcases)) = instantiateTDR subst thisCase in
           List.iter2_exn
             ~f:(fun a b ->
               getTypesOfVariablesFromExpectedType typeDefs a result b)

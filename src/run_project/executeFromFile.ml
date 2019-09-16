@@ -1,8 +1,7 @@
-open Core
+open Core 
 open Dt
 open RunProgram
 open Logging
-open RuntimeDataStructures
 open FlattenInstrForPrint
 
 let getStructMap { nums = _; code = _; structMap = sm } = sm
@@ -10,9 +9,7 @@ let getStructMap { nums = _; code = _; structMap = sm } = sm
 type resFinal = variableFlat list [@@deriving show]
 
 let runFile loc =
-  (* let () = logError (fun m -> m "run file") *)
-  (* in  *)
-  let loadedCode = Sexp.load_sexp loc |> writtenInstr_of_sexp in
+  let loadedCode = Core.Sexp.load_sexp loc |> writtenInstr_of_sexp in
   let r = runProgram loadedCode in
   match r with
   | Some res ->

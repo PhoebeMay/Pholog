@@ -3,7 +3,6 @@ open Logging
 open WriteInstrToFile
 open ExecuteFromFile
 open Dt
-open Core
 
 exception EXN
 
@@ -40,15 +39,15 @@ let writetest () =
     \  iter(N) :- N1 is N - 1, iter(N1).\n\n\
     \  ?- iter(10000000)\n\n\n"
   in
-  let _ = writeInstructions "instr" testCase in
-  let _ = logError (fun m -> m "finish write") in
+  writeInstructions "instr" testCase false;
+  logError (fun m -> m "finish write");
   ()
 
 let _ = writetest
 
 let runfiletest () =
-  let () = runFile "instr" in
-  let _ = logError (fun m -> m "finish run") in
+  runFile "instr";
+  logError (fun m -> m "finish run");
   ()
 
 let _ = runfiletest

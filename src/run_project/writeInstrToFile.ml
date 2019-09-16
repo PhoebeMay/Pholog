@@ -8,11 +8,10 @@ let writeInstructions location s tc =
   let lexbuf = Lexing.from_string s in
   let parseTree =
     Parser.main Lexer.token lexbuf
-    (* in let functT,query = genFunctionTable parseTree *)
   in
   let _typeinfo = typeCheck tc parseTree in
   let instr = genCode parseTree in
-  let { code = flatcode; nums = arrLens; structMap = lookupmap } = instr in
+  let { code = flatcode; nums = _arrLens; structMap = _lookupmap } = instr in
   let () = logInfo (fun m -> m "%s" (strInstructionArray 0 flatcode)) in
   let toWrite =
     instr

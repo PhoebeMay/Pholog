@@ -32,4 +32,4 @@
 (env
   (dev
   (ocamlopt_flags (:standard -O3 ))
-    (flags (:standard -warn-error -A-42))))
+    (flags (:standard  ))))

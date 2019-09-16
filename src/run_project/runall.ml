@@ -1,12 +1,10 @@
 open Core
 open RunProgram
 open GenCode
-open Utils
 open Logging
 open FlattenInstrForPrint
 open TypeChecker
 open Dt
-open ParseTree
 open RuntimeDataStructures
 
 let execute s tc =
@@ -26,7 +24,7 @@ let execute s tc =
      in let () = print_endline str_query *)
   in
   let instr = genCode parseTree in
-  let { code = flatcode; nums = arrLens; structMap = lookupmap } =
+  let { code = _flatcode; nums = _arrLens; structMap = lookupmap } =
     instr
     (* in let str_code = Sexp.to_string(sexp_of_code (code,nums,st))
      in let () = print_endline str_code  *)

@@ -1,44 +1,32 @@
 open Core
 open ParseTree
 open Dt
-open Utils
 open Logging
 
-(*
-let setIfNotAlready hashT key counter =
-  try (
-    Hashtbl.find_exn hashT key
-  )
-  with Caml.Not_found
-    ->
-    Hashtbl.add_exn hashT ~key:key ~data:(!counter);
-    counter := !counter + 1;
-    !counter - 1 *)
-
 let makeVariAbstract ~varMap:mapping ~envCounter ~tempCounter
-    ~position:currentPosition ~useMap:lastuses ~isQuery vari =
+    ~position:currentPosition ~useMap:lastuses  vari =
   let current = Hashtbl.find mapping vari in
   match current with
   | Some x -> x
   | None ->
-      logDebug (fun m -> m "Make abstract %a " pp_var vari);
-      let lastUse = Hashtbl.find_exn lastuses vari in
-      let () =
-        logDebug (fun m ->
-            m "lastuse: %a, currentPosition: %a" pp_intnum lastUse pp_intnum
-              currentPosition)
-      in
-      (* if ((lastUse <= 1 || currentPosition = lastUse) && not isQuery) *)
-      if false then (
-        let res = T (Temp !tempCounter) in
-        Hashtbl.add_exn mapping ~key:vari ~data:res;
-        tempCounter := !tempCounter + 1;
-        res )
-      else
-        let res = E (Env !envCounter) in
-        Hashtbl.add_exn mapping ~key:vari ~data:res;
-        envCounter := !envCounter + 1;
-        res
+    logDebug (fun m -> m "Make abstract %a " pp_var vari);
+    let lastUse = Hashtbl.find_exn lastuses vari in
+    let () =
+      logDebug (fun m ->
+          m "lastuse: %a, currentPosition: %a" pp_intnum lastUse pp_intnum
+            currentPosition)
+    in
+    (* if ((lastUse <= 1 || currentPosition = lastUse) && not isQuery) *)
+    if false then (
+      let res = T (Temp !tempCounter) in
+      Hashtbl.add_exn mapping ~key:vari ~data:res;
+      tempCounter := !tempCounter + 1;
+      res )
+    else
+      let res = E (Env !envCounter) in
+      Hashtbl.add_exn mapping ~key:vari ~data:res;
+      envCounter := !envCounter + 1;
+      res
 
 (* Env(setIfNotAlready mapping vari counter) *)
 
@@ -46,46 +34,46 @@ let rec makeTermAbstract ~varMap:mapping ~envCounter:counter ~useMap:lastuse
     ~position:currentPosition ~tempCounter ~isQuery:q term =
   match term with
   | TVar var ->
-      TVar
-        (makeVariAbstract ~varMap:mapping ~envCounter:counter ~useMap:lastuse
-           ~position:currentPosition ~tempCounter ~isQuery:q var)
+    TVar
+      (makeVariAbstract ~varMap:mapping ~envCounter:counter ~useMap:lastuse
+         ~position:currentPosition ~tempCounter var)
   | TFun (funtor, ts) ->
-      TFun
-        ( funtor,
-          List.map
-            ~f:
-              (makeTermAbstract ~varMap:mapping ~envCounter:counter
-                 ~useMap:lastuse ~position:currentPosition ~tempCounter
-                 ~isQuery:q)
-            ts )
+    TFun
+      ( funtor,
+        List.map
+          ~f:
+            (makeTermAbstract ~varMap:mapping ~envCounter:counter
+               ~useMap:lastuse ~position:currentPosition ~tempCounter
+               ~isQuery:q)
+          ts )
   | TInt n -> TInt n
 
 let rec makeMathExprAbstract ~varMap:mapping ~envCounter:counter
     ~useMap:lastuse ~position:currentPosition ~tempCounter ~isQuery:q expr =
   match expr with
   | Subtract (e1, e2) ->
-      Subtract
-        ( makeMathExprAbstract ~varMap:mapping ~envCounter:counter
-            ~useMap:lastuse ~position:currentPosition ~tempCounter ~isQuery:q
-            e1,
-          makeMathExprAbstract ~varMap:mapping ~envCounter:counter
-            ~useMap:lastuse ~position:currentPosition ~tempCounter ~isQuery:q
-            e2 )
+    Subtract
+      ( makeMathExprAbstract ~varMap:mapping ~envCounter:counter
+          ~useMap:lastuse ~position:currentPosition ~tempCounter ~isQuery:q
+          e1,
+        makeMathExprAbstract ~varMap:mapping ~envCounter:counter
+          ~useMap:lastuse ~position:currentPosition ~tempCounter ~isQuery:q
+          e2 )
   | Plus (e1, e2) ->
-      Plus
-        ( makeMathExprAbstract ~varMap:mapping ~envCounter:counter
-            ~useMap:lastuse ~position:currentPosition ~tempCounter ~isQuery:q
-            e1,
-          makeMathExprAbstract ~varMap:mapping ~envCounter:counter
-            ~useMap:lastuse ~position:currentPosition ~tempCounter ~isQuery:q
-            e2 )
+    Plus
+      ( makeMathExprAbstract ~varMap:mapping ~envCounter:counter
+          ~useMap:lastuse ~position:currentPosition ~tempCounter ~isQuery:q
+          e1,
+        makeMathExprAbstract ~varMap:mapping ~envCounter:counter
+          ~useMap:lastuse ~position:currentPosition ~tempCounter ~isQuery:q
+          e2 )
   | Base (Int n) -> Base (Int n)
   | Base (Var v) ->
-      Base
-        (Var
-           (makeVariAbstract ~varMap:mapping ~useMap:lastuse
-              ~position:currentPosition ~envCounter:counter ~tempCounter
-              ~isQuery:q v))
+    Base
+      (Var
+         (makeVariAbstract ~varMap:mapping ~useMap:lastuse
+            ~position:currentPosition ~envCounter:counter ~tempCounter
+            v))
 
 (*
 let makeAtomAbstract mapping counter (Atom(name,args)) =
@@ -95,24 +83,25 @@ let makeBodyValAbstract ~varMap:mapping ~envCounter:counter ~useMap:lastuse
     ~position:currentPosition ~tempCounter ~isQuery:q item =
   match item with
   | CAT (Atom (name, args)) ->
-      CAT
-        (Atom
-           ( name,
-             List.map
-               ~f:
-                 (makeTermAbstract ~varMap:mapping ~envCounter:counter
-                    ~useMap:lastuse ~position:currentPosition ~tempCounter
-                    ~isQuery:q)
-               args ))
+    CAT
+      (Atom
+         ( name,
+           List.map
+             ~f:
+               (makeTermAbstract ~varMap:mapping ~envCounter:counter
+                  ~useMap:lastuse ~position:currentPosition ~tempCounter
+                  ~isQuery:q)
+             args ))
   | CAR (IsExpr (vari, mathexpr)) ->
-      CAR
-        (IsExpr
-           ( makeVariAbstract ~varMap:mapping ~envCounter:counter
-               ~useMap:lastuse ~position:currentPosition ~tempCounter
-               ~isQuery:q vari,
-             makeMathExprAbstract ~varMap:mapping ~envCounter:counter
-               ~useMap:lastuse ~position:currentPosition ~tempCounter
-               ~isQuery:q mathexpr ))
+    CAR
+      (IsExpr
+         ( makeVariAbstract ~varMap:mapping ~envCounter:counter
+             ~useMap:lastuse
+             ~position:currentPosition ~tempCounter
+             vari,
+           makeMathExprAbstract ~varMap:mapping ~envCounter:counter
+             ~useMap:lastuse ~position:currentPosition ~tempCounter
+             ~isQuery:q mathexpr ))
   | Cut -> Cut
   | Fail -> Fail
 
@@ -120,38 +109,37 @@ let rec updateLastVariableUsePositionTerm result (currentPosition : int) term =
   (* logDebug (fun m -> m "updateLastVariableUsePositionTerm"); *)
   match term with
   | TVar var ->
-      (* Hashtbl.add_exn result ~key:var ~data:currentPosition *)
-      let x = Hashtbl.change result var ~f:(fun _ -> Some currentPosition) in
-      x
+    (* Hashtbl.add_exn result ~key:var ~data:currentPosition *)
+    let x = Hashtbl.change result var ~f:(fun _ -> Some currentPosition) in
+    x
   | TFun (_, ts) ->
-      List.iter ts
-        ~f:(updateLastVariableUsePositionTerm result currentPosition)
+    List.iter ts
+      ~f:(updateLastVariableUsePositionTerm result currentPosition)
   | TInt _ -> ()
 
 let rec updateLastVariableUsePositionMathExpr result currentPosition mathexpr =
   match mathexpr with
   | Plus (x, y) ->
-      updateLastVariableUsePositionMathExpr result currentPosition x;
-      updateLastVariableUsePositionMathExpr result currentPosition y
+    updateLastVariableUsePositionMathExpr result currentPosition x;
+    updateLastVariableUsePositionMathExpr result currentPosition y
   | Subtract (x, y) ->
-      updateLastVariableUsePositionMathExpr result currentPosition x;
-      updateLastVariableUsePositionMathExpr result currentPosition y
+    updateLastVariableUsePositionMathExpr result currentPosition x;
+    updateLastVariableUsePositionMathExpr result currentPosition y
   | Base (Int _) -> ()
   | Base (Var var) ->
-      let x = Hashtbl.change result var ~f:(fun _ -> Some currentPosition) in
-      x
+    let x = Hashtbl.change result var ~f:(fun _ -> Some currentPosition) in
+    x
 
-(* TODO CAN I COMPILE 1 IS 1 *)
 
-let rec updateLastVariableUsePositionClauseBodyVal result currentPosition bv =
+let updateLastVariableUsePositionClauseBodyVal result currentPosition bv =
   logDebug (fun m -> m "updateLastVariableUsePositionClauseBodyVal");
   match bv with
-  | CAT (Atom (name, args)) ->
-      List.iter args
-        ~f:(updateLastVariableUsePositionTerm result currentPosition)
+  | CAT (Atom (_name, args)) ->
+    List.iter args
+      ~f:(updateLastVariableUsePositionTerm result currentPosition)
   | CAR (IsExpr (vari, mathexpr)) ->
-      updateLastVariableUsePositionMathExpr result currentPosition mathexpr;
-      Hashtbl.change result vari ~f:(fun _ -> Some currentPosition)
+    updateLastVariableUsePositionMathExpr result currentPosition mathexpr;
+    Hashtbl.change result vari ~f:(fun _ -> Some currentPosition)
   | Cut -> ()
   | Fail -> ()
 
@@ -162,9 +150,9 @@ let rec getTermsLastUse result counter x =
   match x with
   | [] -> ()
   | t :: ts ->
-      logDebug (fun m -> m "hi");
-      updateLastVariableUsePositionClauseBodyVal result counter t;
-      getTermsLastUse result (counter + 1) ts
+    logDebug (fun m -> m "hi");
+    updateLastVariableUsePositionClauseBodyVal result counter t;
+    getTermsLastUse result (counter + 1) ts
 
 let getPositionLastVarUse (Clause (head, terms)) =
   let result = Hashtbl.create strKeyImp in
@@ -186,52 +174,52 @@ let rec genAbstCBVList ~varMap:mapping ~envCounter:envVars ~useMap:lastuse
   match bvs with
   | [] -> []
   | t :: ts ->
-      let x =
-        makeBodyValAbstract ~varMap:mapping ~envCounter:envVars ~useMap:lastuse
-          ~position:num ~tempCounter ~isQuery:q t
-      in
-      x
-      :: genAbstCBVList ts ~position:(num + 1) ~varMap:mapping
-           ~envCounter:envVars ~useMap:lastuse ~tempCounter ~isQuery:q
+    let x =
+      makeBodyValAbstract ~varMap:mapping ~envCounter:envVars ~useMap:lastuse
+        ~position:num ~tempCounter ~isQuery:q t
+    in
+    x
+    :: genAbstCBVList ts ~position:(num + 1) ~varMap:mapping
+      ~envCounter:envVars ~useMap:lastuse ~tempCounter ~isQuery:q
 
 (* makeTermAbstract mapping counter lastuse currentPosition term = *)
 
 let makeClauseAbstract c =
   match c with
   | C (Clause (Atom (name, args), terms)) ->
-      let envVars = ref 0 in
-      let tempCounter = ref 0 in
-      let mapping = Hashtbl.create strKeyImp in
-      let lastuse =
-        getPositionLastVarUse (Clause (Atom (name, args), terms))
-      in
-      let () =
-        logDebug (fun m -> m "last use is");
-        Hashtbl.iteri lastuse ~f:(fun ~key ~data:value ->
-            logDebug (fun m -> m "(%a,%a)\n" pp_var key pp_intnum value))
-      in
-      let abstHead =
-        List.map
-          ~f:
-            (makeTermAbstract ~varMap:mapping ~envCounter:envVars
-               ~useMap:lastuse ~position:0 ~tempCounter ~isQuery:false)
-          args
+    let envVars = ref 0 in
+    let tempCounter = ref 0 in
+    let mapping = Hashtbl.create strKeyImp in
+    let lastuse =
+      getPositionLastVarUse (Clause (Atom (name, args), terms))
+    in
+    let () =
+      logDebug (fun m -> m "last use is");
+      Hashtbl.iteri lastuse ~f:(fun ~key ~data:value ->
+          logDebug (fun m -> m "(%a,%a)\n" pp_var key pp_intnum value))
+    in
+    let abstHead =
+      List.map
+        ~f:
+          (makeTermAbstract ~varMap:mapping ~envCounter:envVars
+             ~useMap:lastuse ~position:0 ~tempCounter ~isQuery:false)
+        args
         (* in let rec genAbstTail bvs num =
-         match bvs with
-         | [] -> []
-         | t::ts -> let x = makeBodyValAbstract ~varMap:mapping ~envCounter:envVars ~useMap:lastuse ~position:num ~tempCounter:tempCounter t
+           match bvs with
+           | [] -> []
+           | t::ts -> let x = makeBodyValAbstract ~varMap:mapping ~envCounter:envVars ~useMap:lastuse ~position:num ~tempCounter:tempCounter t
            in x::(genAbstTail ts (num+1)) *)
-      in
-      let abstTail =
-        genAbstCBVList ~varMap:mapping ~envCounter:envVars ~useMap:lastuse
-          ~position:1 ~tempCounter ~isQuery:false terms
-      in
-      let ansClause = Clause (Atom (name, abstHead), abstTail) in
-      let () =
-        logDebug (fun m ->
-            m "Abstract clause is %a" (pp_clause pp_location) ansClause)
-      in
-      (ansClause, !envVars)
+    in
+    let abstTail =
+      genAbstCBVList ~varMap:mapping ~envCounter:envVars ~useMap:lastuse
+        ~position:1 ~tempCounter ~isQuery:false terms
+    in
+    let ansClause = Clause (Atom (name, abstHead), abstTail) in
+    let () =
+      logDebug (fun m ->
+          m "Abstract clause is %a" (pp_clause pp_location) ansClause)
+    in
+    (ansClause, !envVars)
   | _ -> raise Oops
 
 let genFunctionTable (Program (Sentence prog, Resolvant goals)) =
@@ -242,10 +230,10 @@ let genFunctionTable (Program (Sentence prog, Resolvant goals)) =
     match clauses with
     | [] -> hashT
     | (Clause (Atom (name, args), body), n) :: cs ->
-        Hashtbl.add_multi hashT
-          ~key:(AbstractF (name, List.length args))
-          ~data:(Clause (Atom (name, args), body), n);
-        genFunctionTableH cs hashT
+      Hashtbl.add_multi hashT
+        ~key:(AbstractF (name, List.length args))
+        ~data:(Clause (Atom (name, args), body), n);
+      genFunctionTableH cs hashT
   in
   let table =
     genFunctionTableH

@@ -1,7 +1,6 @@
 open Core
 open Dt
 open ParseTree
-open Logging
 open Utils
 
 type abstractInstruction1 =

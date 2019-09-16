@@ -1,7 +1,6 @@
 open Core
 open Dt
 open Logging
-open Initialise
 open RuntimeDataStructures
 open StackImplementation
 
@@ -37,7 +36,7 @@ let rec rewindTrail trail =
           rewindTrail node.prev )
   | None -> raise (Err "trail empty on rewind")
 
-let rewindStack (c : choicePoint node) compState = c.value.stack
+let rewindStack (c : choicePoint node) = c.value.stack
 
 let backtrack compState =
   logDebug (fun m -> m "backtrack");
@@ -46,20 +45,12 @@ let backtrack compState =
   | Some c ->
       let newTrail =
         rewindTrail compState.trail
-        (* TODO CHECK *)
-        (* in let _ = match (c.value.stack) with
-        | (Some(e : environment node)) ->
-          compState.returnCps <- e.value.callerCps
-    | None -> compState.returnCps <- None *)
       in
-      (* Do i need to update nextOptionPointer somewhere? *)
       compState.cp <- c.value.nextOptionPointer;
       compState.trail <- newTrail;
-
-      (* compState.returnTrailPoint <- newTrail; *)
       compState.arguments <- Array.copy c.value.arguments;
       compState.returnAddress <- c.value.returnAddr;
-      compState.envStack <- rewindStack c compState;
+      compState.envStack <- rewindStack c ;
       compState.returnCps <- c.value.returnCps;
       compState.returnTrailPoint <- c.value.returnTrailPoint;
       if

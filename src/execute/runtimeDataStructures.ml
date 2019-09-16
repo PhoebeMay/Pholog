@@ -1,6 +1,5 @@
 open Core
 open Dt
-open ParseTree
 open StackImplementation
 
 type result = variable array [@@deriving sexp]

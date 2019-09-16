@@ -100,7 +100,7 @@ let rec appVarSubst varBindings x =
       TypeCons (name, List.map ~f:(appVarSubst varBindings) args)
   | IntTyp -> IntTyp
 
-let rec appDefSubst
+let appDefSubst
     (predBindings : (var, (var * intnum) typeins) Base.Hashtbl.t) varBindings x
     =
   match Hashtbl.find predBindings x with

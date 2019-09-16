@@ -16,7 +16,7 @@ let rec getInstructionNumPredCodes predCodes =
 (*Hash table from function id to position needed for call*)
 (*Hash table from function id * clause num needed for backtrack*)
 (*Only need the latter, then*)
-type clauseId = functionId * int [@@deriving show, sexp]
+type clauseId = functionId * int [@@deriving sexp]
 
 let clauseIdImp =
   ( module struct
