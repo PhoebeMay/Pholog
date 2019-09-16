@@ -2,7 +2,6 @@ open Core
 open Dt
 open RunProgram
 open Logging
-open RuntimeDataStructures
 open FlattenInstrForPrint
 
 let getStructMap {nums = _; code = _; structMap = sm} = sm

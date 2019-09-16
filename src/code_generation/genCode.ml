@@ -1,7 +1,6 @@
 open Core
 open ParseTree
 open Dt
-open Logging
 open Pervasives
 open CodeStructureInArg
 open CodeLoadStructure

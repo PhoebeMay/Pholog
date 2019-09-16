@@ -12,7 +12,7 @@ let rec getInstructionNumPredCodes predCodes =
   | ((_id : functionId),xs)::ys -> getInstructionNumClauseCodes xs + getInstructionNumPredCodes ys
 
 
-type clauseId = functionId * int [@@deriving show, sexp]
+type clauseId = functionId * int [@@deriving sexp]
 
 
 (* hash table implementation for clause id *)

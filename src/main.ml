@@ -3,7 +3,6 @@ open Logging
 open WriteInstrToFile
 open ExecuteFromFile
 open Dt
-open Core
 
 exception EXN
 

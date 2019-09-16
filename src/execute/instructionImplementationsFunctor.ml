@@ -1,9 +1,7 @@
 open Dt
 open Core
 open Logging
-open FlattenInstrForPrint
 open Unification
-open Initialise
 open RuntimeDataStructures
 open StackImplementation
 

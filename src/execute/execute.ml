@@ -264,7 +264,7 @@ module DriverAndFunctions (State : StateTyp)  : DriverAndFunctionsTyp = struct
       | StructGetVariable(E(Env(e))),_, Some(env) ->
         I.unifyInFromHeap (env.value.vars) e compState
 
-      | StructGetVariable(T(Temp(e))),_, Some(env) ->
+      | StructGetVariable(T(Temp(e))),_,_ ->
         I.unifyInFromHeap compState.temps e compState
 
       | PutIntT(Temp(t), n),_,_ ->
@@ -358,8 +358,7 @@ module DriverAndFunctions (State : StateTyp)  : DriverAndFunctionsTyp = struct
         compState.cp <- compState.cp + 1;
         compState.choicePoints <- e.value.callerCps;
         compState.trail <- e.value.callerTrailpoint;
-        let resetHead = e.value.callerCps
-        in execute compState
+         execute compState
 
       | Backtrack,_,_ ->
         execute (backtrack compState)

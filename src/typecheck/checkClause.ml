@@ -59,7 +59,7 @@ let typeCheckAtom predTypes variableTypes constructorToType binding
 
 
 
-let typeCheckIs (IsExpr(x,body)) variableTypes =
+let typeCheckIs (IsExpr(x,_body)) variableTypes =
   match Hashtbl.find variableTypes x with
   | Some(IntTyp) -> ()
   | _ -> raise (Err "Not int in arith expr")

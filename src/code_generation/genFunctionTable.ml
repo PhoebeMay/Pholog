@@ -1,7 +1,6 @@
 open Core
 open ParseTree
 open Dt
-open Utils
 open Logging
 
 (* Get location for variable *)
@@ -177,10 +176,10 @@ let rec updateLastVariableUsePositionMathExpr result currentPosition mathexpr =
     in x
 
 
-let rec updateLastVariableUsePositionClauseBodyVal result currentPosition bv  =
+let updateLastVariableUsePositionClauseBodyVal result currentPosition bv  =
   logDebug (fun m -> m "updateLastVariableUsePositionClauseBodyVal");
   match bv with
-  | CAT(Atom(name,args)) -> List.iter args
+  | CAT(Atom(_name,args)) -> List.iter args
                               ~f:(updateLastVariableUsePositionTerm result currentPosition)
 
   | CAR(IsExpr(vari, mathexpr)) ->
