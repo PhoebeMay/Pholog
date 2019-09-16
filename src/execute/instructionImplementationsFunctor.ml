@@ -119,20 +119,14 @@ struct
     | B r -> (
         match !r with
         | UnboundVar ->
-            (*IS THIS THE RIGHT INITIAL STATEE *)
             let newArray = Array.init num ~f:(fun _ -> B (ref UnboundVar)) in
             let newTrail = createNew ~prev:compState.trail (Var r) in
             r := StrPointer (name, newArray);
-
-            (* TODO does this change? *)
             compState.currentStr <- (newArray, 0);
-
-            (* Do I need to add to the trail stack?? *)
             compState.cp <- compState.cp + 1;
             compState.trail <- newTrail;
             logDebug (fun m -> m "Trail bind ");
             D.execute compState
-            (* raise Oops *)
         | other ->
             logDebug (fun m -> m "recursive call getstructh");
             getStructureH other name num compState )
@@ -144,10 +138,7 @@ struct
     let strArgs = Array.create ~len:num InitH in
     let () = compState.currentStr <- (strArgs, 0) in
     let newHVal = StrPointer (name, strArgs) in
-    let () =
-      location.(position) <- HeapPointer newHVal
-      (* logDebug (fun m -> m "    put structure %a " pp_varr location) *)
-    in
+    let () = location.(position) <- HeapPointer newHVal in
     compState.cp <- compState.cp + 1;
     D.execute compState
 

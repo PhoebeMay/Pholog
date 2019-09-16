@@ -149,8 +149,6 @@ let getMaxTempCBV result cbv =
       | T (Temp pos) -> if pos > !result then result := pos else ()
       | _ -> () )
 
-(* TODO BROKEN FOR IS  *)
-
 let rec getMaxTempClause (Clause (head, tail)) =
   let result = ref 0 in
   getMaxTempAtom head result;
@@ -204,19 +202,10 @@ let codeClause ((clause, n) : location clause * int) arrLens structMapGen =
   let result =
     match (clause, n) with
     | Clause (Atom (_name, args), tail), n ->
-        let bodycode =
-          codeInsideClause args tail
-          (* in let (t,hs) = firstLast bodycode []
-           in match t with
-           | Call(x) -> Allocate n :: hs @  [DeallocateBeforeLastCall] @ [CallAfterDealloc(x)]
-           | _ -> Allocate n :: hs @ [t] @ [Deallocate] *)
-        in
+        let bodycode = codeInsideClause args tail in
         if List.length bodycode > 0 then
           let t, hs = firstLast bodycode [] in
-          match t with
-          (* TODO UNDO *)
-          (* | Call(x) -> Allocate n :: hs @  [DeallocateBeforeLastCall] @ [CallAfterDealloc(x)] *)
-          | _ -> (Allocate n :: hs) @ [ t ] @ [ Deallocate ]
+          match t with _ -> (Allocate n :: hs) @ [ t ] @ [ Deallocate ]
         else [ Allocate n; Deallocate ]
   in
   addTempClears (Hash_set.create locationImp ()) result

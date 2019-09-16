@@ -74,11 +74,6 @@ module DriverAndFunctions (State : StateTyp) : DriverAndFunctionsTyp = struct
       | TrustMe, Some c, _ ->
           (*Discard a choice point*)
           compState.cp <- compState.cp + 1;
-
-          (* TODO CHECK THIS LINE *)
-          (* if compState.returnCps = Some(c)
-           then (compState.returnCps <- None; compState.returnTrailPoint <- None)
-           else (); *)
           if Some c = c.prev then raise Oops else ();
           compState.choicePoints <- c.prev;
           compState.infinal <- true;
@@ -158,10 +153,6 @@ module DriverAndFunctions (State : StateTyp) : DriverAndFunctionsTyp = struct
           compState.envStack <- newStackVal;
           compState.cp <- compState.cp + 1;
           compState.infinal <- true;
-
-          (* TODO CHECK *)
-          (* compState.returnCps <- stack.value.callerCps;
-        compState.returnTrailPoint <- stack.value.callerTrailpoint; *)
           if
             List.exists (getPreds compState.returnCps) ~f:(fun x ->
                 Some x = compState.choicePoints)
@@ -173,20 +164,8 @@ module DriverAndFunctions (State : StateTyp) : DriverAndFunctionsTyp = struct
           let newStackVal =
             match stack.prev with Some prev -> Some prev | None -> raise Oops
           in
-          (* logDebug(fun m -> m "cp is %a" pp_intnum compState.cp); *)
-          (* logDebug(fun m -> m "cp set to %a" pp_intnum (stack.value.returnAddress)); *)
-          compState.cp <- stack.value.returnAddress;
           compState.envStack <- newStackVal;
           compState.infinal <- true;
-
-          (* TODO CHECK *)
-          (* compState.returnCps <- stack.value.callerCps;
-        compState.returnTrailPoint <- stack.value.callerTrailpoint; *)
-          if
-            List.exists (getPreds compState.returnCps) ~f:(fun x ->
-                Some x = compState.choicePoints)
-          then print_endline "bug184"
-          else ();
           execute compState
       | PutVariable (location, Arg a), _, Some env ->
           (*Put a new unbound variable on the heap and copy it into Vn and Ai*)
@@ -241,7 +220,6 @@ module DriverAndFunctions (State : StateTyp) : DriverAndFunctionsTyp = struct
           let heapTop = heapValueArray.(pos) in
           let oldCp = compState.cp in
           let newState = unifyH heapTop (Int n1) compState in
-          (* TODO what if unification failed *)
           if newState.cp = oldCp then (
             newState.currentStr <- (heapValueArray, pos + 1);
             newState.cp <- compState.cp + 1;
@@ -254,14 +232,9 @@ module DriverAndFunctions (State : StateTyp) : DriverAndFunctionsTyp = struct
             match position with
             | E (Env e) -> env.value.vars.(e)
             | T (Temp t) -> compState.temps.(t)
-            (* in let () = logDebug (fun m -> m " StructGetValue %a <- %a " pp_variable envVar pp_heapValue heapTop ) *)
           in
           let oldCp = compState.cp in
-          let newState =
-            unifyS envVar (HeapPointer heapTop) compState
-            (* in *)
-            (* let () = logDebug (fun m -> m "%a %a" pp_intnum oldCp pp_intnum newState.cp) *)
-          in
+          let newState = unifyS envVar (HeapPointer heapTop) compState in
           if newState.cp = oldCp then (
             newState.currentStr <- (heapValueArray, pos + 1);
             newState.cp <- compState.cp + 1;

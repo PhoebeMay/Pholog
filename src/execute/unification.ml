@@ -65,7 +65,6 @@ let rec unifyLists xs ys compState =
       logDebug (fun m -> m "unify lists done");
       compState )
     else
-      (* TODO careful *)
       let cp = compState.cp in
       let newCompState = unifyH xs.(counter) ys.(counter) compState in
       if newCompState.cp = cp then unifyListsH xs ys (counter + 1) newCompState

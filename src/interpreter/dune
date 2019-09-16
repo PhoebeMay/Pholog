@@ -1,6 +1,0 @@
-(library
-  (name interpreter7)
-  (libraries prolog_lexer_parser logs logs.fmt)
-  (preprocess (pps ppx_deriving.std))
-  (wrapped false)
-)
