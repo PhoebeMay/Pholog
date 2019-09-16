@@ -5,7 +5,6 @@ open NoTypeCheck
 open TypeCheckTests
 
 exception UnifiyFail
-
 exception False
 
-let suite = "OUnit Lexer + Parser Tests" >::: tests_notc @ tests_tc
+let suite = "OUnit Lexer + Parser Tests" >::: (tests_notc @ tests_tc)

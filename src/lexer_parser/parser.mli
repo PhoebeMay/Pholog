@@ -1,18 +1,19 @@
+
 (* The type of tokens. *)
 
-type token =
-  | VAR of string
+type token = 
+  | VAR of (string)
   | TYPEDEF
   | RBRAC
   | QUES
   | PRED
   | PLUS
-  | NAME of string
+  | NAME of (string)
   | MINUS
   | LBRAC
   | IS
   | INTTYP
-  | INT of int
+  | INT of (int)
   | FSTOP
   | FAIL
   | EQUALS
@@ -21,10 +22,10 @@ type token =
   | COMMA
   | ARR
 
-exception (* This exception is raised by the monolithic API functions. *)
-            Error
+(* This exception is raised by the monolithic API functions. *)
+
+exception Error
 
 (* The monolithic API. *)
 
-val main :
-  (Lexing.lexbuf -> token) -> Lexing.lexbuf -> string ParseTree.program
+val main: (Lexing.lexbuf -> token) -> Lexing.lexbuf -> (string ParseTree.program)
