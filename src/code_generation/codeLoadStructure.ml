@@ -23,8 +23,7 @@ let rec loadFunBody seenSoFar nextFreeTemp structMapGen term =
       let _ = nextFreeTemp := !nextFreeTemp + 1 in
       let fid = (f, List.length ts) in
       let build, load =
-        loadAllFunBodyAbs ts seenSoFar
-             nextFreeTemp structMapGen
+        loadAllFunBodyAbs ts seenSoFar nextFreeTemp structMapGen
       in
       {
         build =

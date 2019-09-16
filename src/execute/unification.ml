@@ -43,14 +43,12 @@ let backtrack compState =
   match compState.choicePoints with
   | None -> raise Fail
   | Some c ->
-      let newTrail =
-        rewindTrail compState.trail
-      in
+      let newTrail = rewindTrail compState.trail in
       compState.cp <- c.value.nextOptionPointer;
       compState.trail <- newTrail;
       compState.arguments <- Array.copy c.value.arguments;
       compState.returnAddress <- c.value.returnAddr;
-      compState.envStack <- rewindStack c ;
+      compState.envStack <- rewindStack c;
       compState.returnCps <- c.value.returnCps;
       compState.returnTrailPoint <- c.value.returnTrailPoint;
       if

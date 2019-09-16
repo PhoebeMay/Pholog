@@ -100,9 +100,8 @@ let rec appVarSubst varBindings x =
       TypeCons (name, List.map ~f:(appVarSubst varBindings) args)
   | IntTyp -> IntTyp
 
-let appDefSubst
-    (predBindings : (var, (var * intnum) typeins) Base.Hashtbl.t) varBindings x
-    =
+let appDefSubst (predBindings : (var, (var * intnum) typeins) Base.Hashtbl.t)
+    varBindings x =
   match Hashtbl.find predBindings x with
   | Some y -> (
       match y with
@@ -173,7 +172,7 @@ let rec checkSubType predTypeMapping varTypeMapping x y =
           if e = TypeVar (n, 0) then ()
           else logDebug (fun m -> m "found %a" pp_infv e);
           unifyTypesOfInferredVars varTypeMapping e (TypeVar (n, 0))
-      (* raise (Err "Will not unify type constrained by annotation") *) )
+          (* raise (Err "Will not unify type constrained by annotation") *) )
   | TypeVar x, TypeVar (name, num) -> (
       match Hashtbl.find predTypeMapping x with
       | None ->

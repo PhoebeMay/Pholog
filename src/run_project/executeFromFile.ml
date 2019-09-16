@@ -1,4 +1,4 @@
-open Core 
+open Core
 open Dt
 open RunProgram
 open Logging
